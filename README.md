@@ -1,11 +1,24 @@
 # `mssql` - Microsoft SQL Server CLI
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/typomedia/mssql)](https://goreportcard.com/report/github.com/typomedia/mssql)
+[![Go Reference](https://pkg.go.dev/badge/github.com/typomedia/mssql.svg)](https://pkg.go.dev/github.com/typomedia/mssql)
+[![GitHub release](https://img.shields.io/github/release/typomedia/mssql.svg)](https://github.com/typomedia/mssql/releases/latest)
+[![GitHub license](https://img.shields.io/github/license/typomedia/mssql.svg)](https://github.com/typomedia/mssql/blob/master/LICENSE)
+
 This is a simple CLI to execute queries and backup/restore databases on Microsoft SQL Server. It is written in [Go](https://go.dev/) 
 and uses the [Cobra](https://cobra.dev/) library. 
 
 ## Motivation
 
-It's a single binary and drop-in replacement for the `sqlcmd` command line tool without the need of installing the SQL Server client tools.
+It's a single binary and replacement for the `sqlcmd` command line tool without the need of installing the SQL Server client tools.
+
+## Install
+
+    go install github.com/typomedia/mssql@latest
+
+## Download
+
+You can download the latest binary from the [releases](https://github.com/typomedia/mssql/releases) page.
 
 ## Usage
 
