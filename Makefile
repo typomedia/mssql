@@ -9,4 +9,5 @@ run:
 compile:
 	go mod tidy
 	GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o dist/ .
+	GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w" -o dist/ .
 	GOOS=windows GOARCH=amd64 go build -ldflags "-s -w" -o dist/ .
