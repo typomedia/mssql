@@ -44,12 +44,9 @@ testdb      /var/opt/mssql/data/testdb.mdf
 
 ### `mssql query`
 ```
-mssql query -u sa -w password -q "SELECT database_id, name FROM sys.databases"
-database_id  name        
-1            master      
-2            tempdb      
-3            model       
-4            msdb
+mssql query -u sa -w password -q "SELECT cpu_count FROM sys.dm_os_sys_info"
+cpu_count  
+4     
 ```
 
 ### `mssql exec`
