@@ -28,7 +28,7 @@ var listCmd = &cobra.Command{
 		}
 		defer db.Close()
 
-		// get server version
+		// get server databases
 		query := fmt.Sprintf("SELECT name, filename FROM master.dbo.sysdatabases WHERE name NOT IN ('master', 'tempdb', 'model', 'msdb')")
 		rows, err := db.Query(query)
 		if err != nil {
@@ -39,7 +39,7 @@ var listCmd = &cobra.Command{
 
 		headerFmt := color.New(color.Underline).SprintfFunc()
 
-		tbl := table.New("Name", "File")
+		tbl := table.New("Name", "Source")
 		tbl.WithHeaderFormatter(headerFmt)
 
 		for rows.Next() {

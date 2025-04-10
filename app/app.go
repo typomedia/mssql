@@ -13,7 +13,7 @@ type Application struct {
 
 var App = Application{
 	Name:        "mssql",
-	Version:     "0.1.0",
+	Version:     "0.2.0",
 	Author:      "Philipp Speck <philipp@typo.media>",
 	Description: "Microsoft SQL Server CLI",
 	Explanation: "Microsoft SQL Server Command Line Interface",
