@@ -53,6 +53,25 @@ var listCmd = &cobra.Command{
 			tbl.AddRow(name, filename)
 		}
 
+		query = fmt.Sprintf("SELECT name, data_source FROM master.sys.servers WHERE is_linked = 1")
+		rows, err = db.Query(query)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		defer rows.Close()
+
+		for rows.Next() {
+			var name string
+			var filename string
+			err = rows.Scan(&name, &filename)
+			if err != nil {
+				log.Fatal(err)
+			}
+
+			tbl.AddRow(name, filename)
+		}
+
 		tbl.Print()
 	},
 }
